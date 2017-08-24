@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+	<title>详情</title>
+	<link rel="stylesheet" type="text/css" href="../css/api.css" />
+	<link rel="stylesheet" type="text/css" href="../css/fonts/css/font-awesome.min.css" />
+	<style>
+		body {}
+
+		#main {}
+
+		#banner {
+			text-align: center;
+			background-image: -webkit-linear-gradient(left, #ea8610, #e57305);
+			background-image: linear-gradient(left, #ea8610, #e57305);
+			padding: 20px 0 40px;
+		}
+
+		#banner img {
+			display: inline-block;
+			width: 100px;
+			height: 100px;
+			border-radius: 100px;
+			border: 2px solid #fff;
+			background-color: #f5eee9;
+		}
+
+		#banner .title {
+			font-size: 18px;
+			color: #fff;
+			margin: 10px 0;
+		}
+
+		#banner .star {
+			color: #ffd54c;
+			font-size: 20px;
+		}
+
+		#list li {
+			padding: 10px;
+			border-bottom: 1px solid #d4d4d4;
+		}
+
+		#list .row {
+			overflow: hidden;
+		}
+
+		#list .customer {
+			float: left;
+			color: #9b9b9b;
+			font-size: 14px;
+		}
+
+		#list .star {
+			float: right;
+			color: #ffb84d;
+		}
+
+		#list .word {
+			color: #333;
+			font-size: 15px;
+			margin-top: 10px;
+		}
+
+		.titleBanner {
+			background: #e6e6e6;
+			padding: 8px 10px;
+			font-size: 15px;
+		}
+		.return {
+			background: #fff;
+		}
+
+		.topBanner {
+			background: #3e3b50;
+			height: 120px;
+			color: #fff;
+			justify-content: center;
+		}
+
+		.just {
+			justify-content: center;
+		}
+
+		.goImg {
+			width: 45px;
+			margin-bottom: 5px;
+			height: 45px;
+		}
+
+		.bannerRight {
+			margin-right: 20px;
+			color: #fff;
+		}
+
+
+		.m-g-b-20 {
+			margin-bottom: 20px;
+		}
+
+		.m-g-l-20 {
+			margin-left: 10px;
+		}
+
+		.address {
+			padding: 10px;
+			font-size: 14px;
+		}
+
+		.toilet-status {
+			padding: 10px 0;
+			border-top: 8px solid #eeeeee;
+		}
+
+		.toilet-status .left img {
+			height: 30px;
+			width: auto;
+		}
+
+		.toilet-status .right img {
+			height: 20px;
+			width: auto;
+		}
+
+		.line-height-50 {
+			line-height: 50px;
+		}
+
+		.line-height-20 {
+			line-height: 30px;
+		}
+
+		.mg-l-10 {
+			margin-left: 10px;
+		}
+
+		.fix-k {
+			display: flex;
+			margin-left: 10px;
+			padding-bottom: 6px;
+			font-size: 14px;
+			justify-content: space-between;
+			margin-right: 10px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="titleBanner return"  tapmode='active' onclick="back()">
+		<span>返回</span>
+	</div>
+
+
+	<div id='addres-data'>
+	<div class="topBanner flex ">
+		<div class="flex-1 flex flex-col just m-g-l-20">
+			<div class="m-g-b-20 ">
+				寿光市交通局洛城客运站
+			</div>
+			<div class="">
+				266米
+			</div>
+		</div>
+		<div class="flex flex-col bannerRight just">
+			<img class='goImg' src="../image/go.png" alt="">
+			<div>去这里</div>
+		</div>
+	</div>
+	<div class="address">地址:<span>潍坊市寿光市圣城东街与文远路交叉路口东50米</span></div>
+</div>
+
+
+<div id="stadus-data">
+	<div class="toilet-status flex">
+		<div class=" line-height-20 mg-l-10">
+			当前
+		</div>
+		<div class="door-status left flex  f-wrap-w align-center">
+			<img src="../image/opendoor.png" onclick="door(this)" alt="">
+			<img src="../image/opendoor.png" onclick="door(this)" alt="">
+			<img src="../image/opendoor.png" onclick="door(this)" alt="">
+			<img src="../image/opendoor.png" onclick="door(this)" alt="">
+			<img src="../image/opendoor.png" onclick="door(this)" alt="">
+			<img src="../image/opendoor.png" onclick="door(this)" alt="">
+			<img src="../image/opendoor.png" onclick="door(this)" alt="">
+			<img src="../image/opendoor.png" onclick="door(this)" alt="">
+			<img src="../image/opendoor.png" onclick="door(this)" alt="">
+			<img src="../image/opendoor.png" onclick="door(this)" alt="">
+			<img src="../image/closedoor.png" onclick="door(this)"  alt="">
+			<img src="../image/closedoor.png" onclick="door(this)" alt="">
+			<img src="../image/closedoor.png" onclick="door(this)" alt="">
+			<img src="../image/closedoor.png" onclick="door(this)" alt="">
+			<img src="../image/closedoor.png" onclick="door(this)" alt="">
+			<img src="../image/closedoor.png" onclick="door(this)" alt="">
+			<img src="../image/closedoor.png" onclick="door(this)" alt="">
+		</div>
+
+	</div>
+	<div class="fix-k">
+	<span>点击门可以纠正坑位状态</span>
+		<span class="m-g-l-20">点击纠正坑位数量</span>
+	</div>
+</div>
+
+	<div id="feedback">
+		<div class="titleBanner">
+			评价
+		</div>
+		<ul id="list">
+			<li>
+				<div class="row">
+					<div class="customer">
+						188******41 03-06 00:14
+					</div>
+					<div class="star">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star-o"></i>
+					</div>
+				</div>
+				<div class="word">
+					味道好极了！
+				</div>
+			</li>
+			<li>
+				<div class="row">
+					<div class="customer">
+						186******18 02-26 19:09
+					</div>
+					<div class="star">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star-o"></i>
+						<i class="fa fa-star-o"></i>
+						<i class="fa fa-star-o"></i>
+						<i class="fa fa-star-o"></i>
+					</div>
+				</div>
+				<div class="word">
+					f**k！怎么没有纸了！！！
+				</div>
+			</li>
+			<li>
+				<div class="row">
+					<div class="customer">
+						136******25 02-11 07:25
+					</div>
+					<div class="star">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+					</div>
+				</div>
+				<div class="word">
+					为什么这一个厕所里面有四只脚
+				</div>
+			</li>
+			<li>
+				<div class="row">
+					<div class="customer">
+						158******95 02-10 01:54
+					</div>
+					<div class="star">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star-o"></i>
+						<i class="fa fa-star-o"></i>
+					</div>
+				</div>
+				<div class="word">
+					总体还可以！网速不错~
+				</div>
+			</li>
+			<li>
+				<div class="row">
+					<div class="customer">
+						131******79 02-02 04:34
+					</div>
+					<div class="star">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+					</div>
+				</div>
+				<div class="word">
+					很好！第二次光顾了~
+				</div>
+			</li>
+			<li>
+				<div class="row">
+					<div class="customer">
+						189******11 02-01 00:39
+					</div>
+					<div class="star">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star-o"></i>
+					</div>
+				</div>
+				<div class="word">
+					有点远！
+				</div>
+			</li>
+			<li>
+				<div class="row">
+					<div class="customer">
+						189******11 02-01 00:39
+					</div>
+					<div class="star">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star-o"></i>
+					</div>
+				</div>
+				<div class="word">
+					妈的有人了
+				</div>
+			</li>
+			<li>
+				<div class="row">
+					<div class="customer">
+						189******11 02-01 00:39
+					</div>
+					<div class="star">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star-o"></i>
+					</div>
+				</div>
+				<div class="word">
+					太臭了
+				</div>
+			</li>
+		</ul>
+	</div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<!-- <script type="text/javascript" src="../script/zepto.js"></script> -->
+<script>
+	apiready = function() {
+	};
+	function back(){
+		api.closeWin();
+	}
+	function door(e) {
+		if ($api.attr(e, 'src') == '../image/opendoor.png') {
+			$api.attr(e, 'src', '../image/closedoor.png')
+		} else {
+			$api.attr(e, 'src', '../image/opendoor.png')
+		}
+	};
+</script>
+
+</html>
